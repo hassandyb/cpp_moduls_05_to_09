@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 17:37:51 by hed-dyb           #+#    #+#             */
-/*   Updated: 2024/02/06 18:25:20 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2024/02/07 14:05:24 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ class Bureaucrat
 		
 		void incrementGrade();
 		void decrementGrade();
+		
+		
 }
 
 
