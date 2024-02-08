@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 16:05:09 by hed-dyb           #+#    #+#             */
-/*   Updated: 2024/02/08 14:08:13 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2024/02/08 15:13:20 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,14 +65,16 @@ int Bureaucrat::getGrade() const
 
  const char * Bureaucrat::GradeTooHighException::what() const throw()
 {
-	return ("Exception : attempting to reach the highest grade occurred, please note that you highest grade you can get is one.");
+	
+	return ("Exception : The highest grade a bureaucrat can get is one.");
 }
 
 
 
  const char * Bureaucrat::GradeTooLowException::what() const throw()
 {
-	return ("Exception : attempting to reach the lowest  grade occurred, please note that you lowest grade you can get is 150.");
+	
+	return ("Exception : The lowest grade a bureaucrat can get is 150.");
 }
 
 
@@ -81,19 +83,20 @@ int Bureaucrat::getGrade() const
 
 
 
-// void Bureaucrat::incrementGrade()
-// {
-// 	if(this->grade <= 0)
-// 		throw (Bureaucrat::GradeTooHighException())
-// 	this->grade--;
-// }
+void Bureaucrat::incrementGrade()
+{
 
-// void Bureaucrat::decrementGrade()
-// {
-// 	if(this->grade >= 150)
-// 		throw ( Bureaucrat::GradeTooLowException())
-// 	this->grade++;
-// }
+	if(this->grade -1 < 1 )
+		throw Bureaucrat::GradeTooHighException();
+	this->grade--;
+}
+
+void Bureaucrat::decrementGrade()
+{
+	if(this->grade + 1 > 150)
+		throw Bureaucrat::GradeTooLowException();
+	this->grade++;
+}
 
 
 

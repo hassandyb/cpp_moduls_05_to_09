@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 17:37:51 by hed-dyb           #+#    #+#             */
-/*   Updated: 2024/02/08 14:15:54 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2024/02/08 14:30:16 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,19 +38,21 @@ class Bureaucrat
 		
 		class	GradeTooHighException : public std::exception
 		{
-			virtual const char * what() const throw();
+			public : //we need to access it form bureaucrat object !
+				virtual const char * what() const throw();
 
 		};
 		class	GradeTooLowException : public std::exception
 		{
-			virtual const char * what() const throw();
+			public :
+				virtual const char * what() const throw();
 
 		};
 
 		
 
-		// void incrementGrade();
-		// void decrementGrade();
+		void incrementGrade();
+		void decrementGrade();
 };
 
 std::ostream & operator<<(std::ostream & stream, const Bureaucrat & bc);
