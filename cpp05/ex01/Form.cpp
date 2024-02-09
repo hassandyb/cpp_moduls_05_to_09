@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 16:10:18 by hed-dyb           #+#    #+#             */
-/*   Updated: 2024/02/09 15:27:34 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2024/02/09 16:03:41 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,12 @@
 // Canonical form -----------------------
 Form::Form() : name("defaut name"), issigned(0), signgrade(150), executegrade(150) {}
 
-Form::Form(const std::string & name, int s_g, int e_g) : name(name), issigned(0), signgrade(s_g), executegrade(e_g)
+Form::Form(const std::string & name, int s_g) : name(name), issigned(0), signgrade(s_g), executegrade(150)
 {
-	// if(signgrade < 1|| executegrade < 1)
-	// 	throw Form::GradeTooHighException();
-	// if(signgrade > 150 ||executegrade > 150)
-	// 	throw Form::GradeTooHighException();
+	if(signgrade < 1)
+		throw Form::GradeTooHighException();
+	if(signgrade > 150)
+		throw Form::GradeTooLowException();
 }
 
 Form::Form(const Form & other) : name(other.getName()), signgrade(other.getSigngrade()), executegrade(other.getExecutegrade())
