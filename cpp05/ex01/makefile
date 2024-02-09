@@ -6,16 +6,16 @@
 #    By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/08 15:30:48 by hed-dyb           #+#    #+#              #
-#    Updated: 2024/02/08 16:03:53 by hed-dyb          ###   ########.fr        #
+#    Updated: 2024/02/09 12:36:18 by hed-dyb          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = Bureaucrat
-HEADER = Bureaucrat.hpp
+HEADER = Bureaucrat.hpp Form.hpp
 CC = c++
 FLAGS = -Wall -Werror -Wextra -std=c++98
 RM = rm -rf
-SRC = main.cpp Bureaucrat.cpp
+SRC = main.cpp Bureaucrat.cpp Form.cpp
 
 OBJ = $(SRC:%.cpp=%.o)
 
