@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 16:10:18 by hed-dyb           #+#    #+#             */
-/*   Updated: 2024/02/09 16:03:41 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2024/02/09 16:48:16 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,12 @@ int			Form::getExecutegrade() const
 
 
 
-
+std::ostream & operator<<(std::ostream & stream, const Form & form)
+{
+	(void)form;
+	stream << "hellooooo" ;
+	return stream;
+}
 
 
 

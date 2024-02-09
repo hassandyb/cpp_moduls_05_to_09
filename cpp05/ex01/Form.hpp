@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 16:10:42 by hed-dyb           #+#    #+#             */
-/*   Updated: 2024/02/09 16:03:01 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2024/02/09 16:48:34 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,5 +58,6 @@ class Form
 
 };
 
+std::ostream & operator<<(std::ostream & stream, const Form & form);
 
 #endif
