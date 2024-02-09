@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 16:10:42 by hed-dyb           #+#    #+#             */
-/*   Updated: 2024/02/09 13:48:08 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2024/02/09 15:14:31 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,12 @@ class Form
 		Form(const Form & other);
 		Form & operator=(const Form & other);
 		~Form();
+		
+		std::string getName() const;
+		bool		getIssigned() const;
+		int			getSigngrade() const;
+		int			getExecutegrade() const;
+
 };
 
 
