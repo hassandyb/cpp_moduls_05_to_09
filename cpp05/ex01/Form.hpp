@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 16:10:42 by hed-dyb           #+#    #+#             */
-/*   Updated: 2024/02/09 16:48:34 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2024/02/10 17:16:59 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #define FORM_HPP
 
 #include <iostream>
+#include "Bureaucrat.hpp"
 
 class Form
 {
@@ -43,7 +44,7 @@ class Form
 			public :
 				virtual const char * what() const throw()
 				{
-					return ("Exception : The highest grade a bureaucrat can get is one.");
+					return ("Exception : (remember)\n- Maximum grade of a form is 1 \n- To sign a form we need a grade higher or equal to the bureaucrat's grade.");
 				}
 		};
 		
@@ -52,10 +53,11 @@ class Form
 			public :
 				virtual const char * what() const throw()
 				{
-					return ("Exception : The lowest grade a bureaucrat can get is 150.");
+					return ("Exception : (remember)\n- Minimum grade of a form is 150 \n- To sign a form we need a grade higher or equal to the bureaucrat's grade.");
 				}
 		};
 
+		void beSigned(const Bureaucrat & b);
 };
 
 std::ostream & operator<<(std::ostream & stream, const Form & form);

@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 11:41:23 by hed-dyb           #+#    #+#             */
-/*   Updated: 2024/02/08 15:30:31 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2024/02/10 15:14:36 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,21 +32,17 @@ int main ()
 		// Bureaucrat BC("Manager", -57);
 		
 		
-		// Bureaucrat BC("Manager", 1);
-		// BC.incrementGrade();
+		Bureaucrat BC("Manager", 1);
+		BC.incrementGrade();
 
 		
-		Bureaucrat BC("Manager", 150);
-		BC.decrementGrade();
+		// Bureaucrat BC("Manager", 150);
+		// BC.decrementGrade();
 		
 	}
-	catch(Bureaucrat::GradeTooHighException & e)
+	catch(std::exception & e)
 	{
-		std::cout << e.what() <<std::endl;
-	}
-	catch(Bureaucrat::GradeTooLowException & e)
-	{
-		std::cout << e.what() <<std::endl;
+		std::cout << e.what() << std::endl;
 	}
 	
 

@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 11:41:23 by hed-dyb           #+#    #+#             */
-/*   Updated: 2024/02/09 16:47:11 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2024/02/10 17:18:20 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,14 @@ int main ()
 {
 	try
 	{
-		Form test("JOHN", 44);
-		std::cout << test << std::endl;
+		Bureaucrat bc("Manager", 45);
+		Form form("Promotions list", 9);
+		std::cout << form << std::endl;
+		form.beSigned(bc);
+		std::cout << form << std::endl;
+
+
+		
 	}
 	catch(std::exception & e)
 	{

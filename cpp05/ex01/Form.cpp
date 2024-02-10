@@ -6,13 +6,14 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 16:10:18 by hed-dyb           #+#    #+#             */
-/*   Updated: 2024/02/09 16:48:16 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2024/02/10 16:54:08 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 
 // Canonical form -----------------------
+
 Form::Form() : name("defaut name"), issigned(0), signgrade(150), executegrade(150) {}
 
 Form::Form(const std::string & name, int s_g) : name(name), issigned(0), signgrade(s_g), executegrade(150)
@@ -63,17 +64,32 @@ int			Form::getExecutegrade() const
 }
 
 
-
-
 std::ostream & operator<<(std::ostream & stream, const Form & form)
 {
-	(void)form;
-	stream << "hellooooo" ;
+
+	stream << "Form Name       : " << form.getName() << std::endl ;
+	stream << "Form Status     : ";
+	if(form.getIssigned() == true)
+		stream << "Signed" << std::endl;
+	else
+		stream << "Unsigned" << std::endl;
+	stream << "Siging grade    : " << form.getSigngrade() << std::endl;
+	stream << "Executing grade : " << form.getExecutegrade() << std::endl;
+
 	return stream;
 }
 
 
 
+void Form::beSigned(const Bureaucrat & b)
+{
 
+	if(b.getGrade() <= this->getSigngrade())
+	{
+		this->issigned = true;
+	}
+	else
+		throw Form::GradeTooLowException();
+}
 
 
