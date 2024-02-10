@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 16:10:42 by hed-dyb           #+#    #+#             */
-/*   Updated: 2024/02/10 17:16:59 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2024/02/10 19:47:28 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <iostream>
 #include "Bureaucrat.hpp"
 
+class Bureaucrat;// Forward declaration technique
 class Form
 {
 	private :
@@ -44,7 +45,7 @@ class Form
 			public :
 				virtual const char * what() const throw()
 				{
-					return ("Exception : (remember)\n- Maximum grade of a form is 1 \n- To sign a form we need a grade higher or equal to the bureaucrat's grade.");
+					return ("Grade Too High:(remember) \n- Maximum grade of a form is 1 \n- To sign a form we need a grade higher or equal to the bureaucrat's grade.");
 				}
 		};
 		
@@ -53,7 +54,7 @@ class Form
 			public :
 				virtual const char * what() const throw()
 				{
-					return ("Exception : (remember)\n- Minimum grade of a form is 150 \n- To sign a form we need a grade higher or equal to the bureaucrat's grade.");
+					return ("Grade Too Low:(remember) \n- Minimum grade of a form is 150 \n- To sign a form we need a grade higher or equal to the bureaucrat's grade.");
 				}
 		};
 

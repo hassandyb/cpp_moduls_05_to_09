@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 17:37:51 by hed-dyb           #+#    #+#             */
-/*   Updated: 2024/02/08 16:06:02 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2024/02/10 19:04:45 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 #define BUREAUCRAT_HPP
 
 #include <iostream>
+#include "Form.hpp"
 
+class Form; // Forward declaration technique
 class Bureaucrat
 {
 	private :
@@ -48,10 +50,11 @@ class Bureaucrat
 
 		};
 
-		
 
 		void incrementGrade();
 		void decrementGrade();
+		
+		void signForm(Form & form);
 };
 
 std::ostream & operator<<(std::ostream & stream, const Bureaucrat & bc);
