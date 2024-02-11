@@ -1,0 +1,17 @@
+
+
+abstract classes are classes that have at least one pure virtual function. 
+A pure virtual function is declared with "= 0"
+
+
+
+1. **Virtual Function**:
+   - A virtual function is a member function of a class that can be overridden in derived classes.
+   - It has a default implementation in the base class, but derived classes can provide their own implementations.
+   - The base class can also choose to provide a default implementation for a virtual function.
+
+2. **Pure Virtual Function**:
+   - A pure virtual function is a virtual function that has no implementation in the base class.
+   - It is declared with "= 0" at the end of its declaration, indicating that it must be overridden by derived classes.
+   - Classes containing pure virtual functions cannot be instantiated directly; they become abstract classes, serving as interfaces or blueprints for derived classes.
+   - Derived classes must provide an implementation for all pure virtual functions to become concrete classes.
