@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 15:57:46 by hed-dyb           #+#    #+#             */
-/*   Updated: 2024/02/11 16:02:12 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2024/02/12 17:16:46 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,16 @@ class AForm
 {
 	private :
 		const std::string name;
+		std::string target;
 		bool issigned;
 		const int signgrade;
 		const int executegrade;
+		
+		
 	
 	public :
 		AForm();
-		AForm(const std::string & name, int s_g);
+		AForm(const std::string & name,std::string target, int s_g, int e_g);
 		AForm(const AForm & other);
 		AForm & operator=(const AForm & other);
 		~AForm();
@@ -38,7 +41,7 @@ class AForm
 		bool		getIssigned() const;
 		int			getSigngrade() const;
 		int			getExecutegrade() const;
-		
+		std::string getTarget() const;
 		
 		
 		class GradeTooHighException : public std::exception

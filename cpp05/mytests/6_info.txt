@@ -15,3 +15,18 @@ A pure virtual function is declared with "= 0"
    - It is declared with "= 0" at the end of its declaration, indicating that it must be overridden by derived classes.
    - Classes containing pure virtual functions cannot be instantiated directly; they become abstract classes, serving as interfaces or blueprints for derived classes.
    - Derived classes must provide an implementation for all pure virtual functions to become concrete classes.
+
+
+
+concrete class ??
+
+A concrete class in C++ is a class that can be instantiated, meaning you can create objects of that class type. 
+
+it means it the opositr of an abstruct - wish meanins concret calss is a calss that does not contain any pure virtual function.
+
+
+
+
+
+the constructor of the base class is called automatically by the constructor of the derived class.
+

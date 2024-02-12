@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 16:10:18 by hed-dyb           #+#    #+#             */
-/*   Updated: 2024/02/11 16:20:34 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2024/02/12 17:13:58 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 // Canonical form -----------------------
 
-AForm::AForm() : name("defaut name"), issigned(0), signgrade(150), executegrade(150) {}
+AForm::AForm() : name("defaut name"), target("default target"), issigned(0), signgrade(150), executegrade(150) {}
 
-AForm::AForm(const std::string & name, int s_g) : name(name), issigned(0), signgrade(s_g), executegrade(150)
+AForm::AForm(const std::string & name, std::string target, int s_g, int e_g) : name(name), target(target), issigned(0), signgrade(s_g), executegrade(e_g)
 {
 	if(signgrade < 1)
 		throw AForm::GradeTooHighException();
@@ -24,7 +24,7 @@ AForm::AForm(const std::string & name, int s_g) : name(name), issigned(0), signg
 		throw AForm::GradeTooLowException();
 }
 
-AForm::AForm(const AForm & other) : name(other.getName()), signgrade(other.getSigngrade()), executegrade(other.getExecutegrade())
+AForm::AForm(const AForm & other) : name(other.getName()), target(other.getTarget()), signgrade(other.getSigngrade()), executegrade(other.getExecutegrade())
 {
 
 	this->issigned = other.getIssigned();
@@ -63,6 +63,10 @@ int			AForm::getExecutegrade() const
 	return this->executegrade;
 }
 
+std::string AForm::getTarget() const
+{
+	return this->target;
+}
 
 std::ostream & operator<<(std::ostream & stream, const AForm & form)
 {

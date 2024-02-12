@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 16:16:03 by hed-dyb           #+#    #+#             */
-/*   Updated: 2024/02/11 16:18:24 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2024/02/12 17:41:04 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 class PresidentialPardonForm : public AForm
 {
 
-}
+};
 
 
 #endif
