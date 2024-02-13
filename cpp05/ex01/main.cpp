@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 11:41:23 by hed-dyb           #+#    #+#             */
-/*   Updated: 2024/02/10 19:50:32 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2024/02/13 14:46:34 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int main ()
 
 		
 		Bureaucrat bc("The Manager", 123);
-		Form form("Promotion Form", 5);
+		Form form("Promotion Form", 5, 5);
 		bc.signForm(form);
 
 	}

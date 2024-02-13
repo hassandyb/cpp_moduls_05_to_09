@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 16:10:18 by hed-dyb           #+#    #+#             */
-/*   Updated: 2024/02/10 16:54:08 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2024/02/13 14:47:49 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 Form::Form() : name("defaut name"), issigned(0), signgrade(150), executegrade(150) {}
 
-Form::Form(const std::string & name, int s_g) : name(name), issigned(0), signgrade(s_g), executegrade(150)
+Form::Form(const std::string & name, int s_g, int e_g) : name(name), issigned(0), signgrade(s_g), executegrade(e_g)
 {
 	if(signgrade < 1)
 		throw Form::GradeTooHighException();

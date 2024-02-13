@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 16:10:42 by hed-dyb           #+#    #+#             */
-/*   Updated: 2024/02/10 19:47:28 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2024/02/13 14:45:51 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class Form
 	
 	public :
 		Form();
-		Form(const std::string & name, int s_g);
+		Form(const std::string & name, int s_g, int e_g);
 		Form(const Form & other);
 		Form & operator=(const Form & other);
 		~Form();
