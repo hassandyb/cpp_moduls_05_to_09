@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 16:11:22 by hed-dyb           #+#    #+#             */
-/*   Updated: 2024/02/13 15:18:26 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2024/02/13 16:12:56 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm & other
 }
 
 ShrubberyCreationForm & ShrubberyCreationForm::operator=(const ShrubberyCreationForm & other)
-{
+{	
 	if(this != &other)
 	{
 		this->target = other.target;

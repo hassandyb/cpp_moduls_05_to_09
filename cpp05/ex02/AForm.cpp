@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 16:10:18 by hed-dyb           #+#    #+#             */
-/*   Updated: 2024/02/13 13:08:06 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2024/02/13 16:12:11 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ AForm::AForm(const AForm & other) : name(other.getName()), issigned(other.getIss
 
 AForm & AForm::operator=(const AForm & other)
 {
+
 	if(this != &other)
 		this->issigned = other.issigned;
 	return *this;
