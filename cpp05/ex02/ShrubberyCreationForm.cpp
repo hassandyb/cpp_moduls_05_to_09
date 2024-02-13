@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 16:11:22 by hed-dyb           #+#    #+#             */
-/*   Updated: 2024/02/13 16:12:56 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2024/02/13 17:19:56 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,16 @@ ShrubberyCreationForm::~ShrubberyCreationForm() {}
 std::string ShrubberyCreationForm::getTarget()
 {
 	return this->target;
+}
+
+void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
+{
+	if(this->getIssigned() == false)
+		throw AForm::GradeTooLowException();
+	else if (executor.getGrade() < this->getExecutegrade())
+		throw AForm::GradeTooLowException();
+	std::ofstream stream(this->target + "_shrubbery");
+	// build the tree sheck te test you made using chatgpt
 }
 
 

@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 15:57:46 by hed-dyb           #+#    #+#             */
-/*   Updated: 2024/02/13 12:14:33 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2024/02/13 16:26:16 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,7 @@ class AForm
 		};
 
 		void beSigned(const Bureaucrat & b);
+		virtual void execute(Bureaucrat const & executor) const = 0;
 };
 
 std::ostream & operator<<(std::ostream & stream, const AForm & form);
