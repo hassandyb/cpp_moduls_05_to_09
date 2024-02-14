@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 16:16:03 by hed-dyb           #+#    #+#             */
-/*   Updated: 2024/02/13 16:07:44 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2024/02/14 16:05:43 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ class PresidentialPardonForm : public AForm
 		~PresidentialPardonForm();
 	
 		std::string getTarget();
+		void execute(Bureaucrat const & executor) const;
 
 };
 

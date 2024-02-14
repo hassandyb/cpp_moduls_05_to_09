@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 16:13:10 by hed-dyb           #+#    #+#             */
-/*   Updated: 2024/02/14 15:02:49 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2024/02/14 16:30:53 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,10 +47,21 @@ std::string RobotomyRequestForm::getTarget()
 void RobotomyRequestForm::execute(Bureaucrat const & executor) const
 {
 	if(this->getIssigned() == false)
-		throw AForm::NotSignedException();
-	if(executor.getGrade() > this->getExecutegrade())
-		throw GradeTooLowException();
+		std::cerr << "This form has not been signed yet!" << std::endl;
 	
+	
+	else if(executor.getGrade() > this->getExecutegrade())
+		throw AForm::GradeTooLowException();
+	
+	else
+	{
+		static int x;
+		if(x % 2 == 0)
+			std::cout << "ZIIIIIIIIII! " << this->target << " has been robotomized successfully!" << std::endl;
+		else
+			std::cout << "Robotomy Failed!" << this->target << "has not been robotomized." << std::endl;
+		x++;
+	}
 }
 
 

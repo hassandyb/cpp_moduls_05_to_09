@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 15:57:46 by hed-dyb           #+#    #+#             */
-/*   Updated: 2024/02/14 15:21:04 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2024/02/14 16:24:07 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ class AForm
 			public :
 				virtual const char * what() const throw()
 				{
-					return ("Bureaucrat Grade is high.");
+					return ("AForm: grade too high.");
 				}
 		};
 		
@@ -57,17 +57,10 @@ class AForm
 			public :
 				virtual const char * what() const throw()
 				{
-					return ("Bureaucrat Grade is low.");
+					return ("AForm: grade too low.");
 				}
 		};
-		class NotSignedException : public std::exception 
-		{
-			public :
-				virtual const char * what() const throw()
-				{
-					return ("This Form is not signed");
-				}
-		};
+
 		void beSigned(const Bureaucrat & b);
 		virtual void execute(Bureaucrat const & executor) const = 0;
 };

@@ -5,10 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/11 16:16:05 by hed-dyb           #+#    #+#             */
-/*   Updated: 2024/02/13 16:14:53 by hed-dyb          ###   ########.fr       */
+/*   Created: 2024/02/14 16:19:47 by hed-dyb           #+#    #+#             */
+/*   Updated: 2024/02/14 16:32:07 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+
+
 
 #include "PresidentialPardonForm.hpp"
 
@@ -47,3 +50,15 @@ std::string PresidentialPardonForm::getTarget()
 }
 
 
+void PresidentialPardonForm::execute(Bureaucrat const & executor) const
+{
+	if(this->getIssigned() == false)
+		std::cerr << "This form has not been signed yet!" << std::endl;
+	
+	else if(executor.getGrade() > this->getExecutegrade())
+		throw AForm::GradeTooLowException();
+	
+	else
+		std::cout << this->target << " has been pardoned by Zaphod Beeblebrox." << std::endl;
+	
+}

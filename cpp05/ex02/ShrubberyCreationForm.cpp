@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 16:11:22 by hed-dyb           #+#    #+#             */
-/*   Updated: 2024/02/14 14:57:32 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2024/02/14 16:31:52 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,42 +47,52 @@ std::string ShrubberyCreationForm::getTarget()
 void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 {
 	if(this->getIssigned() == false)
-		throw AForm::NotSignedException();
+		std::cerr << "This form has not been signed yet!" << std::endl;
 	
-	if (executor.getGrade() > this->getExecutegrade())//
+	
+	
+	
+	else if (executor.getGrade() > this->getExecutegrade())//
 		throw AForm::GradeTooLowException();
 	
-	std::ofstream outputfile(this->target + "_shrubbery");
 	
-	if(outputfile.is_open())
+	
+	
+	
+	else 
 	{
-    		outputfile	<< "\n";
-    		outputfile	<< "\n";
-            outputfile	<< "                                .\n";
-            outputfile	<< "                         .         ;  \n";
-            outputfile	<< "                 .              .     ;\n";
-            outputfile	<< "                    ,           ,    ;\n";
-            outputfile	<< "                      :         ;   ;\n";
-            outputfile	<< " .                  %;     %; ;  ;%\n";
-            outputfile	<< "   ;                 ;%;  %%;  ;%;\n";
-            outputfile	<< "     %;              %;%;  ;%;  ;%\n";
-            outputfile	<< "       ;%;           ;%;  ;%;   %;\n";
-            outputfile	<< "         ;%;         ;%;   ;%;  ;%\n";
-            outputfile	<< "           ;%;      ;%;    ;%; ;%\n";
-            outputfile	<< "             ;%%.   ;%;     ;%%,;\n";
-            outputfile	<< "               ;%%;;%;      ;%%%%\n";
-            outputfile	<< "                 %%%%        %%%%,\n";
-            outputfile	<< "                  %%%%      %%%%\n";
-            outputfile	<< "                   %%%%    %%%%\n";
-            outputfile	<< "                    %%%%  %%%%\n";
-            outputfile	<< "                     %%%%%%%%\n";
-            outputfile	<< "                    %%%%%%%%%%\n";
-            outputfile	<< "                   %%%%%%%%%%%%\n";
-            outputfile	<< "                      %%%%%%\n";
-		outputfile.close();
-	}
-	else
-		std::cerr << "Error: Unable to open ";
+		std::ofstream outputfile(this->target + "_shrubbery");
+		if(outputfile.is_open())
+		{
+				outputfile	<< "\n";
+				outputfile	<< "\n";
+				outputfile	<< "                                .\n";
+				outputfile	<< "                         .         ;  \n";
+				outputfile	<< "                 .              .     ;\n";
+				outputfile	<< "                    ,           ,    ;\n";
+				outputfile	<< "                      :         ;   ;\n";
+				outputfile	<< " .                  %;     %; ;  ;%\n";
+				outputfile	<< "   ;                 ;%;  %%;  ;%;\n";
+				outputfile	<< "     %;              %;%;  ;%;  ;%\n";
+				outputfile	<< "       ;%;           ;%;  ;%;   %;\n";
+				outputfile	<< "         ;%;         ;%;   ;%;  ;%\n";
+				outputfile	<< "           ;%;      ;%;    ;%; ;%\n";
+				outputfile	<< "             ;%%.   ;%;     ;%%,;\n";
+				outputfile	<< "               ;%%;;%;      ;%%%%\n";
+				outputfile	<< "                 %%%%        %%%%,\n";
+				outputfile	<< "                  %%%%      %%%%\n";
+				outputfile	<< "                   %%%%    %%%%\n";
+				outputfile	<< "                    %%%%  %%%%\n";
+				outputfile	<< "                     %%%%%%%%\n";
+				outputfile	<< "                    %%%%%%%%%%\n";
+				outputfile	<< "                   %%%%%%%%%%%%\n";
+				outputfile	<< "                      %%%%%%\n";
+			outputfile.close();
+		}
+		else
+			std::cerr << "Error: Unable to open ";
+		}
+
 
 }
 
