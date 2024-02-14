@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 16:13:10 by hed-dyb           #+#    #+#             */
-/*   Updated: 2024/02/13 15:18:50 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2024/02/14 15:02:49 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,3 +43,18 @@ std::string RobotomyRequestForm::getTarget()
 {
 	return this->target;
 }
+
+void RobotomyRequestForm::execute(Bureaucrat const & executor) const
+{
+	if(this->getIssigned() == false)
+		throw AForm::NotSignedException();
+	if(executor.getGrade() > this->getExecutegrade())
+		throw GradeTooLowException();
+	
+}
+
+
+
+
+
+

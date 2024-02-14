@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 16:13:07 by hed-dyb           #+#    #+#             */
-/*   Updated: 2024/02/13 15:10:04 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2024/02/14 15:17:30 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ class RobotomyRequestForm : public AForm
 		~RobotomyRequestForm();
 		
 		std::string getTarget();
+		void execute(Bureaucrat const & executor) const;
+
 
 };
 

@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 15:57:46 by hed-dyb           #+#    #+#             */
-/*   Updated: 2024/02/13 16:26:16 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2024/02/14 15:21:04 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ class AForm
 			public :
 				virtual const char * what() const throw()
 				{
-					return ("Grade Too High:(remember) \n- Maximum grade of a form is 1 \n- To sign a form we need a grade higher or equal to the bureaucrat's grade.");
+					return ("Bureaucrat Grade is high.");
 				}
 		};
 		
@@ -57,10 +57,17 @@ class AForm
 			public :
 				virtual const char * what() const throw()
 				{
-					return ("Grade Too Low:(remember) \n- Minimum grade of a form is 150 \n- To sign a form we need a grade higher or equal to the bureaucrat's grade.");
+					return ("Bureaucrat Grade is low.");
 				}
 		};
-
+		class NotSignedException : public std::exception 
+		{
+			public :
+				virtual const char * what() const throw()
+				{
+					return ("This Form is not signed");
+				}
+		};
 		void beSigned(const Bureaucrat & b);
 		virtual void execute(Bureaucrat const & executor) const = 0;
 };
