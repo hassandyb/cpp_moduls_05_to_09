@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 15:57:46 by hed-dyb           #+#    #+#             */
-/*   Updated: 2024/02/16 16:01:36 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2024/02/16 16:00:51 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ class AForm
 		AForm(const std::string & name,int s_g, int e_g);
 		AForm(const AForm & other);
 		AForm & operator=(const AForm & other);
-		virtual ~AForm();
+		virtual ~AForm();// to make sure that we call the destructor of the drived calss (like Shrubbery, Robotomy ..)
 		
 		
 		std::string getName() const;
