@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 17:37:51 by hed-dyb           #+#    #+#             */
-/*   Updated: 2024/02/13 14:48:54 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2024/02/15 13:50:05 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ class Bureaucrat
 		void decrementGrade();
 		
 		void signForm(AForm & form);
+		void executeForm(AForm const & form);
 };
 
 std::ostream & operator<<(std::ostream & stream, const Bureaucrat & bc);
