@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 16:10:42 by hed-dyb           #+#    #+#             */
-/*   Updated: 2024/02/13 14:45:51 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2024/02/16 17:12:24 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <iostream>
 #include "Bureaucrat.hpp"
 
-class Bureaucrat;// Forward declaration technique
+class Bureaucrat;// Forward declaration technique to avoid circular dependency 
 class Form
 {
 	private :

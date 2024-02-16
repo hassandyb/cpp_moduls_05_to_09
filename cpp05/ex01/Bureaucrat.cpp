@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 16:05:09 by hed-dyb           #+#    #+#             */
-/*   Updated: 2024/02/10 19:27:32 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2024/02/16 17:18:09 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,7 +102,6 @@ void Bureaucrat::signForm(Form & form)
 	try
 	{
 		form.beSigned(*this);// this bureaucrat tryes to sign the form
-		//if success
 		std::cout << (*this).getName() <<  " signed " << form.getName() << std::endl;
 		
 	}
