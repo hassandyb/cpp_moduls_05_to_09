@@ -7,35 +7,36 @@
 //     example 1 -------------------------------------
 
 
-// void examplefunction()
-// {
-// 	throw std::runtime_error("An error occurred!");
+void examplefunction()
+{
+	throw std::runtime_error("An error occurred!");
 
 
 
 
 
-// 	// you can also use :
-// 	// std::logic_error:  you can use it in case to dividing by zero fro example
-// 	// std::invalid_argument: when a function recieved invalid argument
-// 	// std::out_of_range
-// 	//std::domain_error:
-// 	// std::length_error
-// }
 
-// int main ()
-// {
-// 	try 
-// 	{
-// 		examplefunction();
+	// you can also use :
+	// std::logic_error:  you can use it in case to dividing by zero fro example
+	// std::invalid_argument: when a function recieved invalid argument
+	// std::out_of_range
+	//std::domain_error:
+	// std::length_error
+}
 
-// 	}
-// 	catch(const std::exception & e)
-// 	{
-// 		std::cerr << "Caught exception: " << e.what() << std::endl;
-// 	}
-// 	return 0;
-// }
+int main ()
+{
+	try 
+	{
+		examplefunction();
+
+	}
+	catch(const std::exception & e)
+	{
+		std::cerr << "Caught exception: " << e.what() << std::endl;
+	}
+	return 0;
+}
 
 //    example 2 ----------------------------------------
 

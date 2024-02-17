@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 17:37:51 by hed-dyb           #+#    #+#             */
-/*   Updated: 2024/02/08 16:06:02 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2024/02/17 12:29:58 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 class Bureaucrat
 {
 	private :
-		std::string name;
+		const std::string name;
 		int grade;
 	public :
 		Bureaucrat();

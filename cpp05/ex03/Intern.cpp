@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 12:58:58 by hed-dyb           #+#    #+#             */
-/*   Updated: 2024/02/16 15:37:58 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2024/02/17 12:39:12 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ AForm * Intern::makeForm(std::string form_name, std::string form_target)
 			
 		i++;
 	}
-	std::cout << "Intern did not create " << form_name << " form! because there no template for that." << std::endl;
+	std::cout << "Intern did not create " << form_name << " form! because there is no template for that." << std::endl;
 	return NULL; 
 }
 

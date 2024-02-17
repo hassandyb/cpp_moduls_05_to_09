@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 16:13:10 by hed-dyb           #+#    #+#             */
-/*   Updated: 2024/02/14 16:30:53 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2024/02/17 12:45:53 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,11 @@ std::string RobotomyRequestForm::getTarget()
 	return this->target;
 }
 
+
+
+
+
+
 void RobotomyRequestForm::execute(Bureaucrat const & executor) const
 {
 	if(this->getIssigned() == false)
@@ -55,12 +60,12 @@ void RobotomyRequestForm::execute(Bureaucrat const & executor) const
 	
 	else
 	{
-		static int x;
-		if(x % 2 == 0)
+		srand(time(NULL));
+		
+		if(rand() % 2 == 0)
 			std::cout << "ZIIIIIIIIII! " << this->target << " has been robotomized successfully!" << std::endl;
 		else
-			std::cout << "Robotomy Failed!" << this->target << "has not been robotomized." << std::endl;
-		x++;
+			std::cout << "Robotomy Failed! " << this->target << " has not been robotomized." << std::endl;
 	}
 }
 

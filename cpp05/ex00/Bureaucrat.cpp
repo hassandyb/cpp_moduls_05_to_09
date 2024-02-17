@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 16:05:09 by hed-dyb           #+#    #+#             */
-/*   Updated: 2024/02/08 16:07:26 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2024/02/17 12:30:33 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 
 // Canonical form : -----------------------
 
-Bureaucrat::Bureaucrat() : name("Default_name"), grade(150)
-{
-
-}
+Bureaucrat::Bureaucrat() : name("Default_name"), grade(150) {}
 
 Bureaucrat::Bureaucrat( const std::string & name, int grade) : name(name), grade(grade)
 {
@@ -35,17 +32,11 @@ Bureaucrat::Bureaucrat( const Bureaucrat & other)
 Bureaucrat & Bureaucrat::operator=( const  Bureaucrat & other)
 {
 	if(this != &other)
-	{
-		this->name = other.getName();
 		this->grade = other.getGrade();
-	}
 	return *this;
 }
 
-Bureaucrat::~Bureaucrat()
-{
-	
-}
+Bureaucrat::~Bureaucrat() {}
 
 // getters : -----------------------
 std::string Bureaucrat::getName() const

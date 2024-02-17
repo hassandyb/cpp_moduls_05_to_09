@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 17:37:51 by hed-dyb           #+#    #+#             */
-/*   Updated: 2024/02/15 13:50:05 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2024/02/17 12:33:19 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class AForm; // Forward declaration technique
 class Bureaucrat
 {
 	private :
-		std::string name;
+		const std::string name;
 		int grade;
 	public :
 		Bureaucrat();
