@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 11:41:23 by hed-dyb           #+#    #+#             */
-/*   Updated: 2024/02/17 12:47:54 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2024/02/17 15:42:40 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,25 +23,25 @@ int main ()
 	try
 	{
 		// Form functions : -----------------------
-		// Bureaucrat B("Manager", 1);
+		Bureaucrat B("Manager", 1);
+		
+		ShrubberyCreationForm F("The_target");
+		// RobotomyRequestForm F("The_target");
+		// PresidentialPardonForm F("Thetarget");
+
+		F.beSigned(B);
+		F.execute(B);
+		
+		
+		// Bureaucrat functions : -----------------------
+		// Bureaucrat B("Manager", 46);
 		
 		// ShrubberyCreationForm F("The_target");
 		// RobotomyRequestForm F("The_target");
 		// PresidentialPardonForm F("Thetarget");
 
-		// F.beSigned(B);
-		// F.execute(B);
-		
-		
-		// Bureaucrat functions : -----------------------
-		Bureaucrat B("Manager", 46);
-		
-		// ShrubberyCreationForm F("The_target");
-		RobotomyRequestForm F("The_target");
-		// PresidentialPardonForm F("Thetarget");
-
-		B.signForm(F);
-		B.executeForm(F);
+		// B.signForm(F);
+		// B.executeForm(F);
 		
 
 	}
