@@ -1,0 +1,19 @@
+
+
+
+"Pseudo literals" in the context of your exercise refer to special representations for infinity and NaN (Not a Number). These are values that are not represented directly as numbers in source code but are instead represented by specific symbols or keywords. 
+
+Here's what they mean:
+
+1. **Infinity (`inf`, `-inf`)**: These represent positive infinity and negative infinity, respectively. They are used to denote values that exceed the maximum or minimum representable value for a floating-point type.
+
+2. **NaN (`nan`)**: This represents a "Not a Number" value, which indicates undefined or unrepresentable results of floating-point arithmetic operations, such as taking the square root of a negative number or dividing zero by zero.
+
+In C++, these pseudo literals are typically represented by special symbols or keywords. For example:
+
+- `inf`: Positive infinity
+- `-inf`: Negative infinity
+- `nan`: Not a Number
+
+Your `ScalarConverter` class needs to handle these pseudo literals as well, converting them to appropriate representations in `float` and `double` types, and possibly indicating that conversion to other types like `int` or `char` is not possible or meaningful.
+

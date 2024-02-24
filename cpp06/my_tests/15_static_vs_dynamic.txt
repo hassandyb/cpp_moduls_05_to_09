@@ -1,0 +1,47 @@
+
+
+
+
+Static casting
+
+- compile-time operation. (no runtime checks.)
+- not doesnt perform runtime type checking
+- ot safe for downcasting 
+
+Dynamic Casting:
+
+- runtime operation 
+- safe for  safe downcasting
+- ithe failir of casting pointer return NULL, and throw an exceprion is acsr of failie in casting reference,
+
+// Upcasting refers to casting a pointer or reference of a derived class type to a pointer or reference of a base class type. Both `static_cast` and `dynamic_cast` can perform upcasting, but there are differences in behavior:
+
+// 1. **Static Cast (static_cast)**:
+//    - Static cast performs upcasting without any runtime type checking.
+//    - It's performed at compile time and doesn't incur any overhead during runtime.
+//    - It assumes that the conversion is valid based on the static type information available at compile time.
+//    - It's generally used for safe conversions where the relationship between the types is known at compile time, such as upcasting in class hierarchies.
+//    - It's not suitable for polymorphic types or scenarios where runtime type checking is required.
+
+// 2. **Dynamic Cast (dynamic_cast)**:
+//    - Dynamic cast performs upcasting with runtime type checking.
+//    - It verifies at runtime whether the conversion is valid by checking the actual type of the object.
+//    - It's suitable for scenarios where the relationship between the types may not be known at compile time or when dealing with polymorphic types.
+//    - If the upcast is not valid, dynamic cast returns a null pointer (for pointers) or throws a `std::bad_cast` exception (for references).
+//    - Dynamic cast incurs some runtime overhead due to the runtime type checking.
+
+// In summary, while both static cast and dynamic cast can perform upcasting, dynamic cast provides additional safety by performing runtime type checking, ensuring that the cast is valid at runtime. Static cast, on the other hand, assumes that the conversion is valid based solely on the static type information available at compile time.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
