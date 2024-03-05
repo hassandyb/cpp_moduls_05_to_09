@@ -1,0 +1,17 @@
+
+
+
+
+
+
+
+
+
+
+
+
+STL algorithms, or Standard Template Library algorithms, are a set of predefined functions provided by the C++ Standard Library that operate on containers and perform various operations such as searching, sorting, and modifying elements. These algorithms are highly efficient, well-tested, and generic, meaning they can be used with different types of containers without modification.
+
+Some common STL algorithms include std::find, std::sort, std::transform, std::accumulate, std::count, etc. These algorithms abstract away the low-level details of common operations on containers, making code cleaner, more readable, and less error-prone.
+
+

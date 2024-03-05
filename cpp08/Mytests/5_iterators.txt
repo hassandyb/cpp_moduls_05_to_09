@@ -1,0 +1,31 @@
+
+
+
+
+
+In C++, there are several types of iterators, each with its own characteristics and usage:
+
+1. **Input Iterators**:
+   - These iterators support operations for single-pass input. They can be used to read values from a range of elements.
+   - Example: `std::istream_iterator` is used to read values from an input stream.
+
+2. **Output Iterators**:
+   - These iterators support operations for single-pass output. They can be used to write values to a range of elements.
+   - Example: `std::ostream_iterator` is used to write values to an output stream.
+
+3. **Forward Iterators**:
+   - These iterators support operations for both reading and writing values, and they can move forward in a sequence.
+   - Example: Standard library containers like `std::list` provide forward iterators.
+
+4. **Bidirectional Iterators**:
+   - These iterators support operations for moving forward and backward in a sequence.
+   - Example: Standard library containers like `std::list` and `std::deque` provide bidirectional iterators.
+
+5. **Random Access Iterators**:
+   - These iterators support operations for arbitrary element access, as well as random access to elements with constant time complexity.
+   - They can be incremented and decremented, and they support arithmetic operations like addition and subtraction.
+   - Example: Standard library containers like `std::vector` provide random access iterators.
+
+
+
+
