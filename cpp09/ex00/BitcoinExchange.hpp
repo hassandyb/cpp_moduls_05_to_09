@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 10:01:56 by hed-dyb           #+#    #+#             */
-/*   Updated: 2024/03/08 19:49:27 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2024/03/10 15:29:58 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 #include <iostream>
 #include <cstring>
 #include <limits>
+#include <stdlib.h>
 
 class BitcoinExchange
 {

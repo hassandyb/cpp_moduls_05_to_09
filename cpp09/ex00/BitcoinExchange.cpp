@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 14:28:30 by hed-dyb           #+#    #+#             */
-/*   Updated: 2024/03/10 14:20:18 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2024/03/10 16:24:34 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ BitcoinExchange::BitcoinExchange()
 	size_t indice;
 	size_t len;
 
-	getline(file, line);
+	std::getline(file, line);
 	while(1)
 	{
 		std::getline(file, line);
@@ -207,7 +207,7 @@ bool ft_value_accepted(std::string & value)
 	
 	iss >> value_double;
 	
-	if(value_double > INT_MAX)
+	if(value_double > 1000)
 	{
 		std::cout << "Error : too large number." << std::endl;
 		return false;
@@ -332,6 +332,16 @@ std::string ft_previous_date(std::string date)
 	
 }
 
+double ft_str_to_double(std::string str)
+{
+	std::istringstream iss(str);
+
+	double nbr;
+
+	iss >> nbr;
+	return nbr;
+
+}
 void BitcoinExchange::ft_desplay_result(std::string & date, std::string & value)
 {
 	std::map<std::string, std::string>::iterator it;
@@ -349,8 +359,13 @@ void BitcoinExchange::ft_desplay_result(std::string & date, std::string & value)
 
 	}
 	
-	(void)value;
-	std::cout << "===" << existing_date << std::endl;
+	//##########  strtod(value, NULL) * strtod() <<
+	
+	// strtod(it->second, NULL) *
+	double exchange_date = ft_str_to_double(it->second); 
+	double value_nbr = ft_str_to_double(value);
+	std::cout << date << " => " << value << " = " << value_nbr * exchange_date <<  std::endl;
+	
 }
 
 void BitcoinExchange::ft_make_btc(char *av)
