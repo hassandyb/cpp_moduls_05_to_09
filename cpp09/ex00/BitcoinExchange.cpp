@@ -6,7 +6,7 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 14:28:30 by hed-dyb           #+#    #+#             */
-/*   Updated: 2024/03/10 16:24:34 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2024/03/10 17:03:45 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,15 +118,9 @@ bool ft_all_are_digits(std::string & d_str, std::string & m_str, std::string & y
 bool ft_check_structure(std::string & date)
 {
 	if(date.length() != 10)
-	{
-		std::cout << "Error : worng date => " << date << std::endl;
 		return false;
-	}
 	if(date[4] != '-' || date[7] != '-')
-	{
-		std::cout << "Error : worng date => " << date << std::endl;
 		return false;
-	}
 	return true;
 }
 
@@ -342,6 +336,7 @@ double ft_str_to_double(std::string str)
 	return nbr;
 
 }
+
 void BitcoinExchange::ft_desplay_result(std::string & date, std::string & value)
 {
 	std::map<std::string, std::string>::iterator it;
@@ -358,10 +353,6 @@ void BitcoinExchange::ft_desplay_result(std::string & date, std::string & value)
 		existing_date = tmp_date;
 
 	}
-	
-	//##########  strtod(value, NULL) * strtod() <<
-	
-	// strtod(it->second, NULL) *
 	double exchange_date = ft_str_to_double(it->second); 
 	double value_nbr = ft_str_to_double(value);
 	std::cout << date << " => " << value << " = " << value_nbr * exchange_date <<  std::endl;
