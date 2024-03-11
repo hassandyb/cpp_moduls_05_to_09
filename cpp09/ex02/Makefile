@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/03/10 17:08:27 by hed-dyb           #+#    #+#              #
-#    Updated: 2024/03/11 12:58:36 by hed-dyb          ###   ########.fr        #
+#    Created: 2024/03/11 15:31:58 by hed-dyb           #+#    #+#              #
+#    Updated: 2024/03/11 15:34:16 by hed-dyb          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,11 +14,11 @@ CC = c++
 
 CFLAGS = -Wall -Werror -Wextra -std=c++98 -fsanitize=address -g3
 
-NAME = RPN
+NAME = PmergeMe
 
-HEADERS = RPN.hpp
+HEADERS = PmergeMe.hpp
 
-SRC = main.cpp RPN.cpp
+SRC = main.cpp PmergeMe.cpp
 
 OBJECTS = ./Object_files
 
