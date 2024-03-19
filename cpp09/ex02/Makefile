@@ -6,13 +6,13 @@
 #    By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/11 15:31:58 by hed-dyb           #+#    #+#              #
-#    Updated: 2024/03/11 15:34:16 by hed-dyb          ###   ########.fr        #
+#    Updated: 2024/03/17 17:08:01 by hed-dyb          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = c++
 
-CFLAGS = -Wall -Werror -Wextra -std=c++98 -fsanitize=address -g3
+CFLAGS = -Wall -Werror -Wextra -std=c++98 #-fsanitize=address -g3
 
 NAME = PmergeMe
 

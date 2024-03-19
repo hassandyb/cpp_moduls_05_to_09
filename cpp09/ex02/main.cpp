@@ -6,8 +6,21 @@
 /*   By: hed-dyb <hed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 15:32:19 by hed-dyb           #+#    #+#             */
-/*   Updated: 2024/03/11 15:33:50 by hed-dyb          ###   ########.fr       */
+/*   Updated: 2024/03/12 16:30:38 by hed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PmergeMe.hpp"
+
+
+
+int main (int ac, char **av)
+{
+	PmergeMe pmergeme;
+	
+	
+	pmergeme.ft_start(ac, av);
+	
+	
+
+}
